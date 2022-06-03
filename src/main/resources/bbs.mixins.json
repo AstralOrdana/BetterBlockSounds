@@ -1,7 +1,6 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "refmap": "immersive_weathering.refmap.json",
   "package": "com.ordana.bbs.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
