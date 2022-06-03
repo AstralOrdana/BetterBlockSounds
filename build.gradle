@@ -23,7 +23,7 @@ mixin {
     add sourceSets.main, "${project.mod_id}.refmap.json"
 }
 
-version = '1.0.0-1.18.2'
+version = "${project.minecraft_version}-${project.mod_version}".toString()
 group = 'com.ordana.bbs' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'bbs'
 
