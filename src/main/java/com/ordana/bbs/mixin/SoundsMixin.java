@@ -30,7 +30,8 @@ public abstract class SoundsMixin {
     private static final SoundType METAL = new SoundType(1.0F, 0.6F, SoundEvents.COPPER_BREAK, SoundEvents.COPPER_STEP, SoundEvents.COPPER_PLACE, SoundEvents.COPPER_HIT, SoundEvents.COPPER_FALL);
     private static final SoundType LILY_PAD = new SoundType(1.0F, 1.0F, SoundEvents.BIG_DRIPLEAF_BREAK, SoundEvents.BIG_DRIPLEAF_STEP, SoundEvents.LILY_PAD_PLACE, SoundEvents.BIG_DRIPLEAF_HIT, SoundEvents.BIG_DRIPLEAF_FALL);
     private static final SoundType SMALL_OBJECT = new SoundType(1.0F, 0.8F, SoundEvents.CANDLE_BREAK, SoundEvents.CANDLE_STEP, SoundEvents.CANDLE_PLACE, SoundEvents.CANDLE_HIT, SoundEvents.CANDLE_FALL);
-    private static final SoundType BELL = new SoundType(1.0F, 1.0F, SoundEvents.BELL_BLOCK, SoundEvents.METAL_STEP, SoundEvents.BELL_BLOCK, SoundEvents.COPPER_HIT, SoundEvents.BELL_RESONATE);
+    private static final SoundType BELL = new SoundType(1.0F, 1.0F, SoundEvents.BELL_BLOCK, SoundEvents.METAL_STEP, SoundEvents.BELL_BLOCK, SoundEvents.COPPER_HIT, SoundEvents.METAL_FALL);
+    private static final SoundType GLASS = new SoundType(1.0F, 0.7F, SoundEvents.GLASS_BREAK, SoundEvents.COPPER_STEP, SoundEvents.COPPER_PLACE, SoundEvents.COPPER_HIT, SoundEvents.COPPER_FALL);
 
     @Inject(method = "getSoundType", at = @At("TAIL"), cancellable = true)
     private void getSoundGroupMixin(CallbackInfoReturnable<SoundType> cir){
@@ -53,6 +54,50 @@ public abstract class SoundsMixin {
                                     "coal_block"
                             -> SoundType.NETHER_GOLD_ORE;
                     case
+                            "glass",
+                                    "glass_pane",
+                                    "tinted_glass",
+                                    "redstone_lamp",
+                                    "ice",
+                                    "packed_ice",
+                                    "blue_ice",
+                                    "frosted_ice",
+
+                                    "red_stained_glass",
+                                    "orange_stained_glass",
+                                    "yellow_stained_glass",
+                                    "green_stained_glass",
+                                    "lime_stained_glass",
+                                    "blue_stained_glass",
+                                    "cyan_stained_glass",
+                                    "light_blue_stained_glass",
+                                    "purple_stained_glass",
+                                    "magenta_stained_glass",
+                                    "pink_stained_glass",
+                                    "gray_stained_glass",
+                                    "light_gray_stained_glass",
+                                    "black_stained_glass",
+                                    "white_stained_glass",
+                                    "brown_stained_glass",
+                                    "red_stained_glass_pane",
+                                    "orange_stained_glass_pane",
+                                    "yellow_stained_glass_pane",
+                                    "green_stained_glass_pane",
+                                    "lime_stained_glass_pane",
+                                    "blue_stained_glass_pane",
+                                    "cyan_stained_glass_pane",
+                                    "light_blue_stained_glass_pane",
+                                    "purple_stained_glass_pane",
+                                    "magenta_stained_glass_pane",
+                                    "pink_stained_glass_pane",
+                                    "gray_stained_glass_pane",
+                                    "light_gray_stained_glass_pane",
+                                    "black_stained_glass_pane",
+                                    "white_stained_glass_pane",
+                                    "brown_stained_glass_pane"
+
+                            -> GLASS;
+                    case
                             "oak_leaves",
                                     "birch_leaves",
                                     "spruce_leaves",
@@ -74,7 +119,7 @@ public abstract class SoundsMixin {
                             -> BELL;
                     case
                             "skeleton_skull",
-                            "wither_skeleton_skull"
+                                    "wither_skeleton_skull"
                             -> SoundType.BONE_BLOCK;
                     case
                             "sponge",
@@ -102,10 +147,10 @@ public abstract class SoundsMixin {
                             -> POLISHED_BLACKSTONE;
                     case
                             "polished_blackstone_bricks",
-                                "polished_blackstone_brick_stairs",
-                                "polished_blackstone_brick_slab",
-                                "polished_blackstone_brick_wall",
-                                "chiseled_polished_blackstone"
+                                    "polished_blackstone_brick_stairs",
+                                    "polished_blackstone_brick_slab",
+                                    "polished_blackstone_brick_wall",
+                                    "chiseled_polished_blackstone"
                             -> POLISHED_BLACKSTONE_BRICKS;
                     case
                             "end_stone",
@@ -313,17 +358,5 @@ public abstract class SoundsMixin {
                     default -> cir.getReturnValue();
                 }
         );
-		/*
-		Block currentBlock = this.asBlock();
-		if (currentBlock == Blocks.RAW_COPPER_BLOCK) {
-			cir.setReturnValue(SoundType.NETHER_ORE);
-		} else if(currentBlock == Blocks.COAL_ORE || currentBlock == Blocks.IRON_ORE || currentBlock == Blocks.COPPER_ORE || currentBlock == Blocks.GOLD_ORE || currentBlock == Blocks.LAPIS_ORE || currentBlock == Blocks.REDSTONE_ORE || currentBlock == Blocks.EMERALD_ORE || currentBlock == Blocks.DIAMOND_ORE){
-			cir.setReturnValue(STONE_ORE);
-		} else if(currentBlock.getDefaultState().isIn(BlockTags.STONE_BRICKS)){
-			cir.setReturnValue(SoundType.NETHER_BRICKS);
-		} else if(currentBlock.getDefaultState().isIn(BlockTags.LEAVES) && currentBlock != Blocks.AZALEA_LEAVES && currentBlock != Blocks.FLOWERING_AZALEA_LEAVES){
-			cir.setReturnValue(SoundType.AZALEA);
-		}
-		 */
     }
 }
