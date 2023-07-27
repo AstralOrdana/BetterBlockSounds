@@ -10,31 +10,41 @@ archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
 
-repositories {
-	// Add repositories to retrieve artifacts from in here.
-	// You should only use this when depending on other mods because
-	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
-	// for more information about repositories.
+jar {
+    manifest.attributes(
+            'MixinConfigs': 'bbs.mixins.json'
+    )
+}
+
+repositories{
+    maven { url "https://maven.terraformersmc.com/releases" }
+    maven { url "https://files.minecraftforge.net/maven/" }
+    // Built mods
+    flatDir {
+        dirs "mods_forge"
+    }
+    mavenCentral()
 }
 
 dependencies {
-	// To change the versions see the gradle.properties file
-	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings loom.officialMojangMappings()
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    // To change the versions see the gradle.properties file
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    modImplementation "net.fabricmc:fabric-loader:${project.fabric_loader_version}"
+    modImplementation "net.minecraftforge:javafmllanguage:${rootProject.forge_version}"
 
-	// Fabric API. This is technically optional, but you probably want it anyway.
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    mappings loom.officialMojangMappings()
 
 }
 
 processResources {
-	inputs.property "version", project.version
+    inputs.property "version", project.version
 
-	filesMatching("fabric.mod.json") {
-		expand "version": project.version
-	}
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+    filesMatching("META-INF/mods.toml") {
+        expand "version": project.version
+    }
 }
 
 tasks.withType(JavaCompile).configureEach {

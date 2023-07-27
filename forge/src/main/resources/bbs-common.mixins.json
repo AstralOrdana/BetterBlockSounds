@@ -3,12 +3,12 @@
   "minVersion": "0.8",
   "package": "com.ordana.bbs.mixin",
   "compatibilityLevel": "JAVA_17",
+  "mixins": [
+  ],
   "client": [
     "SoundsMixin"
   ],
-  "mixins": [],
   "injectors": {
     "defaultRequire": 1
-  },
-  "refmap": "bbs-refmap.json"
+  }
 }

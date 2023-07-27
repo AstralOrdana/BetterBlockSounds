@@ -14,11 +14,16 @@
   "license": "LGPLv3",
   "icon": "icon.png",
   "environment": "*",
-  "entrypoints": {},
+  "entrypoints": {
+    "client": [
+      "com.ordana.bbs.BBSFabric"
+    ]
+  },
   "mixins": [
-    "bbs.mixins.json"
+    "bbs-common.mixins.json"
   ],
   "depends": {
-      "minecraft": ">=1.20"
+    "fabric": "*",
+    "minecraft": ">=1.20"
   }
 }
