@@ -3,7 +3,7 @@ loaderVersion = "[40,)"
 license = "LGPLv3"
 
 [[mods]]
-modId = "bbs"
+modId = "spelunkery"
 version = "1.20.1-0.1.2"
 displayName = "Better Block Sounds"
 displayURL = "https://discord.gg/MTUHt3r"
@@ -12,14 +12,14 @@ authors = "Ordana"
 credits = "Inspired by Trainguy's Block Sounds Refresher."
 description = "Block sounds, but better!"
 
-[[dependencies.bbs]]
+[[dependencies.spelunkery]]
     modId="forge"
     mandatory=true
     versionRange="[40,)"
     ordering="NONE"
     side="BOTH"
     
-[[dependencies.bbs]]
+[[dependencies.spelunkery]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.20,1.21)"
