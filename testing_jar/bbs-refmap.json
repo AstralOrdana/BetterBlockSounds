@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "com/ordana/bbs/mixins/SoundsMixin": {
+      "getSoundType": "Lnet/minecraft/world/level/block/Block;m_49962_(Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/SoundType;"
+    }
+  },
+  "data": {
+    "searge": {
+      "com/ordana/bbs/mixins/SoundsMixin": {
+        "getSoundType": "Lnet/minecraft/world/level/block/Block;m_49962_(Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/SoundType;"
+      }
+    }
+  }
+}
