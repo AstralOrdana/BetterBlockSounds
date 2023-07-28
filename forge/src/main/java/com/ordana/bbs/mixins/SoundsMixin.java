@@ -1,4 +1,4 @@
-package com.ordana.bbs.mixin;
+package com.ordana.bbs.mixins;
 
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;

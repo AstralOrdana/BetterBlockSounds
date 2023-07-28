@@ -1,4 +1,4 @@
-package com.ordana.bbs.mixin;
+package com.ordana.bbs.mixins;
 
 import com.ordana.bbs.ModSoundTypes;
 import net.minecraft.world.level.block.Block;

@@ -1,5 +1,5 @@
-modLoader = "javafml"
-loaderVersion = "[46,)"
+modLoader = "lowcodefml"
+loaderVersion = "[40,)"
 license = "LGPLv3"
 
 [[mods]]
@@ -12,17 +12,16 @@ authors = "Ordana"
 credits = "Inspired by Trainguy's Block Sounds Refresher."
 description = "Block sounds, but better!"
 
-[dependencies]
 [[dependencies.bbs]]
-modId = "forge"
-mandatory = true
-versionRange = "[46,)"
-ordering = "NONE"
-side = "BOTH"
+    modId="forge"
+    mandatory=true
+    versionRange="[40,)"
+    ordering="NONE"
+    side="BOTH"
 
 [[dependencies.bbs]]
-modId = "minecraft"
-mandatory = true
-versionRange = "[1.20,)"
-ordering = "NONE"
-side = "BOTH"
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20,1.21)"
+    ordering="NONE"
+    side="BOTH"
