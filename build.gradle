@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.12-SNAPSHOT'
+    id "dev.architectury.loom" version "0.12.0-SNAPSHOT" apply true
 	id 'maven-publish'
 }
 
@@ -30,7 +30,7 @@ dependencies {
     // To change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     modImplementation "net.fabricmc:fabric-loader:${project.fabric_loader_version}"
-    modImplementation "net.minecraftforge:javafmllanguage:${rootProject.forge_version}"
+    forge "net.minecraftforge:forge:${rootProject.forge_version}"
 
     mappings loom.officialMojangMappings()
 

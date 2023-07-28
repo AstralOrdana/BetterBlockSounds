@@ -308,7 +308,7 @@ public class ModSoundTypes {
                     "lilac",
                     "sunflower",
                     "cactus",
-                    "sugarcane",
+                    "sugar_cane",
                     "torchflower" -> {
                 return SoundType.CROP;
             }
