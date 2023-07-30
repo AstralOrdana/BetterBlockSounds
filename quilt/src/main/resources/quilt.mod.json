@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "quilt_loader": {
+    "group": "${group}",
+    "id": "bbs",
+    "version": "${version}",
+    "metadata": {
+      "name": "Better Block Sounds",
+      "description": "Block sounds, but better!",
+      "contributors": {
+        "Your name here": "Ordana"
+      },
+      "contact": {
+        "homepage": "https://www.curseforge.com/minecraft/mc-mods/better-block-sounds",
+        "issues": "https://github.com/AstralOrdana/BetterBlockSounds/issues",
+        "sources": "https://github.com/AstralOrdana/BetterBlockSounds"
+      },
+      "icon": "icon.png"
+    },
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "entrypoints": {},
+    "depends": [
+      {
+        "id": "quilt_loader",
+        "versions": ">=0.19.1"
+      },
+      {
+        "id": "quilted_fabric_api",
+        "versions": ">=7.0.2"
+      },
+      {
+        "id": "minecraft",
+        "versions": ">=1.20"
+      }
+    ]
+  },
+  "mixin": "bbs.mixins.json"
+}

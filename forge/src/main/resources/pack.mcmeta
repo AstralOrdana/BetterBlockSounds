@@ -1,0 +1,19 @@
+{
+  "pack": {
+    "pack_format": 12,
+    "description": [
+      {
+        "text": "Better Block Sounds",
+        "color": "#1eb2bc"
+      },
+      {
+        "text": " - Block sounds but better\nCreated by ",
+        "color": "gray"
+      },
+      {
+        "text": "Ordana",
+        "color": "#683edd"
+      }
+    ]
+  }
+}

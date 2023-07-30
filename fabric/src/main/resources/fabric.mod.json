@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "bbs",
+  "version": "${version}",
+  "name": "Better Block Sounds",
+  "description": "Block sounds, but better!",
+  "authors": [
+    "Ordana"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/better-block-sounds",
+    "sources": "https://github.com/AstralOrdana/BetterBlockSounds"
+  },
+  "license": "LGPLv3",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {},
+  "mixins": [
+    "bbs.mixins.json"
+  ],
+  "depends": {
+    "minecraft": ">=1.20"
+  }
+}

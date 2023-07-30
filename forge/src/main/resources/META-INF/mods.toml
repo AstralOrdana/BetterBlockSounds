@@ -1,0 +1,27 @@
+modLoader = "lowcodefml"
+loaderVersion = "[46,)"
+license = "LGPLv3"
+
+[[mods]]
+modId = "bbs"
+version = "${version}"
+displayName = "Better Block Sounds"
+displayURL = "https://discord.gg/MTUHt3r"
+logoFile = "icon.png"
+authors = "Ordana"
+credits = "Inspired by Trainguy's Block Sounds Refresher."
+description = "Block sounds, but better!"
+
+[[dependencies.bbs]]
+    modId="forge"
+    mandatory=true
+    versionRange="[46,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.bbs]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20,1.21)"
+    ordering="NONE"
+    side="BOTH"

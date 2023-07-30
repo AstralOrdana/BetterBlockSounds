@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.ordana.bbs.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "SoundsMixin"
+  ],
+  "mixins": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
