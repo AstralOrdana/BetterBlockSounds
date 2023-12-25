@@ -2,6 +2,7 @@ package com.ordana.bbs;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -26,6 +27,10 @@ public class ModSoundTypes {
 
     public static SoundType assignSounds(Block block, CallbackInfoReturnable<SoundType> cir) {
         String blockId = BuiltInRegistries.BLOCK.getKey(block).getPath();
+        SoundType sound = null;
+
+        if (block.defaultBlockState().is(BlockTags.SMALL_FLOWERS)) sound = SoundType.HANGING_ROOTS;
+        if (block.defaultBlockState().is(BBSMain.STONE_ORES)) sound = STONE_ORE;
 
         switch (blockId) {
             case "coal_ore",
@@ -322,6 +327,7 @@ public class ModSoundTypes {
                 return SMALL_OBJECT;
             }
         }
+        if (sound != null) return sound;
         return cir.getReturnValue();
     }
 }
